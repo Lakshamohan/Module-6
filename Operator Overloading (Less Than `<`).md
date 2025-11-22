@@ -26,29 +26,20 @@ To write a Python program that demonstrates **operator overloading** by overload
 
 ## 💻 Program
 ```
-  class Beans ():
-     def type(self):
-        print("Vegetable")
-     def color(self):
-        print("Green")
-
-  class Mango ():
-     def type(self):
-        print("Fruit")
-     def color(self):
-        print("Yellow")
-
-     def func(obj):
-        obj.type()
-        obj.color()
-
-  obj_beans = Beans()
-  obj_mango = Mango()
-  func(obj_beans)
-  func(obj_mango)
+class A: 
+    def __init__(self, a):
+        self.a = a
+    def __lt__(self, other):
+        if self.a < other.a:
+            return "ob1 is less than ob2"
+        else:
+            return "ob2 is less than ob1"
+ob1 = A(10)
+ob2 = A(20)
+print(ob1 < ob2)
 ```
 ## Output
-<img width="422" height="244" alt="501946839-7de71100-2a78-4930-9584-2572f5ff2313" src="https://github.com/user-attachments/assets/735af5ee-a7ab-4408-a634-247dd2379ffb" />
+<img width="1265" height="602" alt="504741295-c82cd560-ad27-4abc-8faf-db2e3b0ea7b8" src="https://github.com/user-attachments/assets/34d0fffc-4af1-4b61-8073-426bfbf78918" />
 
 ## Result
 Thus the program has been verified successfully.
